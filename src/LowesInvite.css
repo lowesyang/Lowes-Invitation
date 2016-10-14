@@ -1,0 +1,22 @@
+/* 可根据实际需要修改本样式表*/
+.lowesInvite{
+    margin: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 该样式用于约束图片的最大尺寸*/
+.lowesInvite>img{
+    max-width:600px;
+    max-height:600px;
+}
+
+/* 请不要更改此处 */
+.lowesInvite>canvas{
+    opacity: 0;
+    position: absolute;
+    z-index:-999;
+    left:0;
+    top:0;
+}

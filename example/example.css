@@ -1,0 +1,47 @@
+.editForm{
+    text-align: center;
+    margin:30px;
+}
+.editForm>input{
+    height:22px;
+    padding:5px 8px;
+    border:1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size:14px;
+    color:#666666;
+}
+.editForm>button{
+    font-size:14px;
+    width:80px;
+    height:32px;
+    cursor:pointer;
+    border:0;
+    border-radius:5px;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.editForm>.submitBtn{
+    color:snow;
+    background: #666666;
+}
+.editForm>.submitBtn:hover{
+    background: #777777;
+}
+.editForm>.resetBtn{
+    color:#444444;
+    background: #d3d3d3;
+}
+.editForm>.resetBtn:hover{
+    background: #c9c9c9;
+}
+.editForm>.download{
+    color:snow;
+    width:100px;
+    background: #0099CC;
+}
+.editForm>.download:hover{
+    background: #087ccc;
+}
