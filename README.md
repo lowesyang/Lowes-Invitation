@@ -2,6 +2,13 @@
 An automatic invitation producer plugin
 
 ##Installation
+Body:
+```html
+<div class="lowesInvite">
+    <img src="test.png" />
+    <canvas></canvas>   //just let it be what it should be,
+</div>
+```
 Import css:
 ```html
 <link rel="stylesheet" href="LowesInvite.css" />
@@ -15,7 +22,8 @@ or
 import LowesInvite from "LowesInvite.es6.js"
 ```
 
-##Usage
+##Usage 
+javascript:
 ```javascript
 import LowesInvite from "LowesInvite.es6.js"
 
