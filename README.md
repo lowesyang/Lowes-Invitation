@@ -59,4 +59,4 @@ Set font-family of your name.
 Set bold or not of your name.  
 
 ##Example
-[Smartisan Inivitation](http://www.baidu.com)
+[Smartisan Inivitation](https://github.com/yyh1102/Lowes-Invitation/tree/master/example)
