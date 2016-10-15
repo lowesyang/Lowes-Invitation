@@ -71,7 +71,9 @@ function LowesInvite(){
         var alink=document.createElement("a");
         alink.download="invitation";
         alink.href=this.image.src;
-        alink.click();
+        var evt=document.createEvent('MouseEvents');
+        evt.initEvent('click',true,true);
+        alink.dispatchEvent(evt);
     };
 
     this.setNamePos(options.x,options.y);

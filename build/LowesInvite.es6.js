@@ -23,7 +23,7 @@ class LowesInvite{
         this.width=this.image.offsetWidth;
         this.height=this.image.offsetHeight;
 
-        //设置签名位置
+        //设置签名属性
         this.context.font=options.fontSize+"px "+options.fontFamily;
         if(options.bold) this.context.font="bold "+this.context.font;
         this.context.textAlign="left";
@@ -80,7 +80,9 @@ class LowesInvite{
         let alink=document.createElement("a");
         alink.download="invitation";
         alink.href=this.image.src;
-        alink.click();
+        let evt=document.createEvent('MouseEvents');
+        evt.initEvent('click',true,true);
+        alink.dispatchEvent(evt);
     }
 }
 

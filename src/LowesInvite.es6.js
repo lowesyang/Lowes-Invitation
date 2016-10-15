@@ -80,7 +80,9 @@ class LowesInvite{
         let alink=document.createElement("a");
         alink.download="invitation";
         alink.href=this.image.src;
-        alink.click();
+        let evt=document.createEvent('MouseEvents');
+        evt.initEvent('click',true,true);
+        alink.dispatchEvent(evt);
     }
 }
 
