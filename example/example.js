@@ -6,9 +6,9 @@ window.onload=()=> {
     const download = document.querySelector(".editForm>.download");
     const options={
         color:"#ffffff",
-        x:40,
-        y:400,
-        fontSize:24,
+        x:75,
+        y:720,
+        fontSize:36,
         fontFamily:"Microsoft Yahei"
     }
     const drawing = new LowesInvite(options);

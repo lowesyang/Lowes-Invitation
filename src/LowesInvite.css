@@ -7,12 +7,6 @@
     position: relative;
 }
 
-/* 该样式用于约束图片的最大尺寸*/
-.lowesInvite>img{
-    max-width:600px;
-    max-height:600px;
-}
-
 /* 请不要更改此处 */
 .lowesInvite>canvas{
     opacity: 0;
