@@ -6,7 +6,7 @@ gulp.task('minifyjs',function(){
     return gulp.src('src/LowesInvite.js')
         .pipe(uglify().on('error',gutil.log))
         .pipe(rename({suffix:'.min'}))
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('dist'))
 })
 
 gulp.task('default',function(){

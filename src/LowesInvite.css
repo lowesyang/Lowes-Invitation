@@ -1,17 +1,7 @@
 /*------可根据实际需要修改本样式表------*/
-
 .lowesInvite{
     margin: 20px;
     text-align: center;
     overflow: hidden;
     position: relative;
-}
-
-/* 请不要更改此处 */
-.lowesInvite>canvas{
-    opacity: 0;
-    position: absolute;
-    z-index:-999;
-    left:0;
-    top:0;
 }

@@ -1,4 +1,4 @@
-import LowesInvite from "../build/LowesInvite.es6";
+import LowesInvite from "../src/LowesInvite.es6";
 window.onload=()=> {
     const input = document.querySelector(".editForm>input");
     const submitBtn = document.querySelector(".editForm>.submitBtn");

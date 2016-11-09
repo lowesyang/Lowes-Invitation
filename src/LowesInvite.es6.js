@@ -8,32 +8,55 @@ class LowesInvite{
     *   bold: true or false 签名是否加粗
     * }*/
     constructor(options={}){
+        this.root=document.querySelector(".lowesInvite");
+        this.createDom(this.root.getAttribute("data-img"),this.root);
+
         this.canvas=document.querySelector(".lowesInvite>canvas");
         this.context=this.canvas.getContext("2d");
         this.image=document.querySelector(".lowesInvite>img");
 
-        //动态设置canvas的宽高
-        this.canvas.setAttribute("width",''+this.image.offsetWidth);
-        this.canvas.setAttribute("height",''+this.image.offsetHeight);
+        //必须等待图片下载完后再进行canvas渲染
+        this.image.onload=function(){
 
-        //保存原始图片源
-        this.originalData=this.image.src;
+            //动态设置canvas的宽高
+            this.canvas.setAttribute("width",''+this.image.offsetWidth);
+            this.canvas.setAttribute("height",''+this.image.offsetHeight);
 
-        //保存画布宽高
-        this.width=this.image.offsetWidth;
-        this.height=this.image.offsetHeight;
+            //保存原始图片源
+            this.originalData=this.image.src;
 
-        //设置签名属性
-        this.context.font=options.fontSize+"px "+options.fontFamily;
-        if(options.bold) this.context.font="bold "+this.context.font;
-        this.context.textAlign="left";
-        this.context.baseline="middle";
+            //保存画布宽高
+            this.width=this.image.offsetWidth;
+            this.height=this.image.offsetHeight;
 
-        this.setNamePos(options.x,options.y);
-        this.setNameColor(options.color);
+            //设置签名属性
+            this.context.font=options.fontSize+"px "+options.fontFamily;
+            if(options.bold) this.context.font="bold "+this.context.font;
+            this.context.textAlign="left";
+            this.context.baseline="middle";
 
-        //初始化
-        this.init();
+            this.setNamePos(options.x,options.y);
+            this.setNameColor(options.color);
+
+            //初始化
+            this.init();
+
+            this.image.onload=null;     //防止图片重复onload
+        }.bind(this);
+    }
+
+    //创建DOM元素
+    createDom(src,root){
+        let img=document.createElement("img");
+        let canvas=document.createElement("canvas");
+        img.src=src;
+        canvas.style.opacity=0;
+        canvas.style.position="absolute";
+        canvas.style.zIndex=-999;
+        canvas.style.left=0;
+        canvas.style.top=0;
+        root.appendChild(img);
+        root.appendChild(canvas);
     }
 
     //初始化函数

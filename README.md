@@ -4,15 +4,9 @@ An automatic invitation producer plugin
 ##Installation
 Body:
 ```html
-<div class="lowesInvite">
-    <img src="test.png" />
-    <canvas></canvas>   //just let it be what it should be,
-</div>
+<div class="lowesInvite" data-img="..."></div>
 ```
-Import css:
-```html
-<link rel="stylesheet" href="LowesInvite.css" />
-```
+
 Import js:
 ```javascript
 <script src="LowesInvite.min.js"></script>
@@ -48,7 +42,7 @@ window.onload=()=>{
     invitation.init();  //init invitation
   }
   downloadBtn.onclick=()=>{
-    invitation.exportImt(); //download the ready invitation
+    invitation.exportImg(); //download the ready invitation
   }
 }
 ```
@@ -65,6 +59,13 @@ Set font-size of your name.
 Set font-family of your name.
 - ```bold``` bool  
 Set bold or not of your name.  
+
+##API
+- ```init()```  init invitation
+- ```setNamePos(x,y)``` set the position of your name in the invitation
+- ```setNameColor(color)```  set the color of your name
+- ```drawName(name)```  draw your name in the invitation
+- ```exportImg()``` download the final invitation
 
 ##Example
 [Smartisan Inivitation](https://github.com/yyh1102/Lowes-Invitation/tree/master/example)
