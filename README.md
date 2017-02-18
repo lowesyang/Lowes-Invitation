@@ -13,13 +13,13 @@ Import js:
 ```
 or
 ```javascript
-import LowesInvite from "LowesInvite.es6.js"
+import LowesInvite from "LowesInvite.js"
 ```
 
 ##Usage 
 javascript:
 ```javascript
-import LowesInvite from "LowesInvite.es6.js"
+import LowesInvite from "LowesInvite.js"
 
 //Please create invitation after window loaded.
 window.onload=()=>{   
