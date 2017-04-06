@@ -1,7 +1,7 @@
 # Lowes-Invitation
 An automatic invitation producer plugin
 
-##Installation
+## Installation
 Body:
 ```html
 <div class="lowesInvite" data-img="..."></div>
@@ -16,7 +16,7 @@ or
 import LowesInvite from "LowesInvite.js"
 ```
 
-##Usage 
+## Usage 
 javascript:
 ```javascript
 import LowesInvite from "LowesInvite.js"
@@ -46,7 +46,7 @@ window.onload=()=>{
   }
 }
 ```
-##Options
+## Options
 - ```color``` hex string  
 Set color of your name.
 - ```x```  number  
@@ -60,12 +60,12 @@ Set font-family of your name.
 - ```bold``` bool  
 Set bold or not of your name.  
 
-##API
+## API
 - ```init()```  init invitation
 - ```setNamePos(x,y)``` set the position of your name in the invitation
 - ```setNameColor(color)```  set the color of your name
 - ```drawName(name)```  draw your name in the invitation
 - ```exportImg()``` download the final invitation
 
-##Example
+## Example
 [Smartisan Inivitation](https://github.com/yyh1102/Lowes-Invitation/tree/master/example)
